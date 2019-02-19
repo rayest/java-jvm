@@ -7,7 +7,7 @@ package mobi.rayson.staticproxy;
  *  Time: 10:38 AM
  *  Description:
  **/
-public class ProxyApplication {
+public class NameGetterApplication {
   private static void getName(NameGetter nameGetter) {
     nameGetter.getName();
     nameGetter.getNameById("1");

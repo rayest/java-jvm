@@ -2,7 +2,6 @@ package mobi.rayson.dynamicproxy;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
-import mobi.rayson.staticproxy.NameGetter;
 
 /***
  *  Created with IntelliJ IDEA.
@@ -11,16 +10,16 @@ import mobi.rayson.staticproxy.NameGetter;
  *  Time: 11:00 AM
  *  Description:
  **/
-public class DynamicProxyHandler implements InvocationHandler {
+public class RentHandler implements InvocationHandler {
 
-  private NameGetter nameGetter;
+  private Rent rent;
 
-  public DynamicProxyHandler(NameGetter nameGetter) {
-    this.nameGetter = nameGetter;
+  public RentHandler(Rent rent) {
+    this.rent = rent;
   }
 
   @Override
   public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-    return method.invoke(nameGetter, args);
+    return method.invoke(rent, args);
   }
 }
