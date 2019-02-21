@@ -1,4 +1,4 @@
-package mobi.rayson.staticproxy;
+package mobi.rayson.proxy.staticproxy;
 
 /***
  *  Created with IntelliJ IDEA.

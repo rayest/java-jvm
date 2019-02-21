@@ -1,4 +1,4 @@
-package mobi.rayson.dynamicproxy;
+package mobi.rayson.proxy.dynamicproxy;
 
 /***
  *  Created with IntelliJ IDEA.

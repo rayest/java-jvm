@@ -1,4 +1,4 @@
-package mobi.rayson.cglibproxy;
+package mobi.rayson.proxy.cglibproxy;
 
 import java.lang.reflect.Method;
 import net.sf.cglib.proxy.Enhancer;
