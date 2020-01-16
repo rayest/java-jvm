@@ -14,3 +14,7 @@
 4. 重新查看二进制文件：:%!xxd -r
 5. 查看编译后的字节码文件：javap -verbose -p Demo_01.class
 ```
+
+### List
+* ArrayList
+> 
