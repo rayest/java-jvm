@@ -5,6 +5,7 @@ import org.junit.Test;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 import static org.junit.Assert.assertEquals;
 
@@ -73,5 +74,42 @@ public class ArrayListTest {
 
         assertEquals(10, elementData.length);
 
+    }
+
+    @Note("通过迭代器 iterator 删除遍历到的元素")
+    @Test
+    public void test_remove_with_iterator() {
+        ArrayList<String> list = initArrayList();
+        Iterator<String> iterator = list.iterator();
+        while (iterator.hasNext()){
+            String next = iterator.next();
+            if ("3".equals(next)){
+                iterator.remove();
+            }
+        }
+        assertEquals(5, list.size());
+    }
+
+    @Test(expected = java.util.ConcurrentModificationException.class)
+    public void test_remove_with_list() {
+        ArrayList<String> list = initArrayList();
+        Iterator<String> iterator = list.iterator();
+        while (iterator.hasNext()){
+            String next = iterator.next();
+            if ("3".equals(next)){
+                list.remove(next);
+            }
+        }
+    }
+
+    private ArrayList<String> initArrayList(){
+        ArrayList<String> list = new ArrayList<>();
+        list.add("1");
+        list.add("2");
+        list.add("3");
+        list.add("4");
+        list.add("5");
+        list.add("6");
+        return list;
     }
 }
