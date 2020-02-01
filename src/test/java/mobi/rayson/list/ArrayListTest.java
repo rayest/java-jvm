@@ -1,4 +1,4 @@
-package mobi.rayson.List;
+package mobi.rayson.list;
 
 import mobi.rayson.support.Note;
 import org.junit.Test;
@@ -72,5 +72,6 @@ public class ArrayListTest {
         Object[] elementData = (Object[]) field.get(list);
 
         assertEquals(10, elementData.length);
+
     }
 }
